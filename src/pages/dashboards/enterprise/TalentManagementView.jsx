@@ -74,7 +74,46 @@ export default function TalentManagementView() {
       <div className="p-6">
         <div className="flex items-center gap-4 mb-6">
           {cand.image ? (
-            <img 
+            <img src={cand.image} alt={cand.name} className="w-16 h-16 rounded-full object-cover" />
+          ) : (
+            <div className="w-16 h-16 rounded-full bg-brand-primary-500/20 flex items-center justify-center text-brand-primary-500 text-xl font-bold">
+              {cand.name.charAt(0)}
+            </div>
+          )}
+          <div>
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white">{cand.name}</h2>
+            <p className="text-brand-primary-500 font-medium">{cand.role}</p>
+          </div>
+        </div>
+        
+        <div className="space-y-4">
+          <div>
+            <div className="text-xs font-bold text-slate-500 mb-1 uppercase">Experience & Education</div>
+            <p className="text-sm text-slate-700 dark:text-slate-300">{cand.exp} • {cand.edu}</p>
+          </div>
+          <div>
+            <div className="text-xs font-bold text-slate-500 mb-1 uppercase">Top Skills</div>
+            <div className="flex flex-wrap gap-2 mt-1">
+              {cand.skills.split(',').map(skill => (
+                <span key={skill} className="text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-2 py-1 rounded">{skill.trim()}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-8 flex gap-3">
+          <button className="flex-1 py-3 bg-brand-primary-500 hover:bg-brand-primary-400 text-white rounded-xl font-bold transition-colors">Schedule Interview</button>
+          <button onClick={closeModal} className="px-6 py-3 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 rounded-xl font-bold transition-colors text-slate-900 dark:text-white">Close</button>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div className="space-y-8 animate-fade-in pb-12">
+      {/* 1. Hero Banner */}
+      <div className="relative w-full h-[180px] md:h-[240px] rounded-[24px] border border-slate-200 dark:border-brand-dark-border overflow-hidden bg-white shadow-sm">
+        <img 
           src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80" 
           alt="Banner" 
           className="absolute inset-0 w-full h-full object-cover object-center opacity-70 mix-blend-multiply" 
