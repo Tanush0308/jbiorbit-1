@@ -35,7 +35,7 @@ function Counter({ from = 0, to, duration = 2, suffix = '' }) {
 
 export default function Statistics() {
   return (
-    <section className="py-24 bg-[#0A0807] border-y border-slate-200 relative overflow-hidden">
+    <section className="py-24 bg-brand-primary-600 border-y border-brand-primary-700 relative overflow-hidden">
       <div className="absolute inset-0 bg-noise opacity-20"></div>
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
@@ -49,10 +49,10 @@ export default function Statistics() {
               transition={{ duration: 0.5, delay: stat.delay }}
               className="space-y-2 group"
             >
-              <div className="font-heading font-extrabold text-4xl sm:text-5xl text-slate-800 tracking-tight group-hover:scale-110 transition-transform duration-300">
+              <div className="font-heading font-extrabold text-4xl sm:text-5xl text-white tracking-tight group-hover:scale-110 transition-transform duration-300">
                 <Counter to={stat.value} suffix={stat.suffix} />
               </div>
-              <div className="text-sm font-semibold text-brand-primary-500/80 uppercase tracking-widest font-mono">
+              <div className="text-sm font-semibold text-blue-200/80 uppercase tracking-widest font-mono">
                 {stat.label}
               </div>
             </motion.div>
