@@ -11,14 +11,14 @@ export default function MentorshipView() {
   const [loadingId, setLoadingId] = useState(null);
 
   const mentors = [
-    { id: 'm-1', name: 'Aditi Rao', title: 'VP Product, Freshworks', rating: '4.9', reviews: '128 reviews', price: 'â‚¹2,500/hr', tags: ['Product', 'SaaS', 'GTM'], image: 'https://i.pravatar.cc/150?u=aditi' },
-    { id: 'm-2', name: 'Rohan Deshmukh', title: 'Angel Investor & Ex-founder', rating: '4.8', reviews: '96 reviews', price: 'â‚¹3,200/hr', tags: ['Fundraising', 'Fintech'], image: 'https://i.pravatar.cc/150?u=rohan' },
-    { id: 'm-3', name: 'Sneha Iyer', title: 'CMO, D2C consumer brand', rating: '4.7', reviews: '74 reviews', price: 'â‚¹1,800/hr', tags: ['Brand', 'D2C', 'Growth'], image: 'https://i.pravatar.cc/150?u=sneha' },
-    { id: 'm-4', name: 'Vikram Nair', title: 'Ex-McKinsey, Strategy', rating: '4.9', reviews: '152 reviews', price: 'â‚¹4,000/hr', tags: ['Strategy', 'Consulting'], image: 'https://i.pravatar.cc/150?u=vikram' },
-    { id: 'm-5', name: 'Priya Menon', title: 'Legal Counsel, Startup Law', rating: '4.8', reviews: '88 reviews', price: 'â‚¹2,200/hr', tags: ['Compliance', 'Legal'], image: 'https://i.pravatar.cc/150?u=priya' },
-    { id: 'm-6', name: 'Arjun Kapoor', title: 'CTO, Series-B startup', rating: '4.7', reviews: '61 reviews', price: 'â‚¹2,800/hr', tags: ['Tech', 'Engineering'], image: 'https://i.pravatar.cc/150?u=arjun' },
-    { id: 'm-7', name: 'Neha Bansal', title: 'Founder, EdTech', rating: '4.9', reviews: '110 reviews', price: 'â‚¹3,000/hr', tags: ['Product', 'EdTech'], image: 'https://i.pravatar.cc/150?u=neha' },
-    { id: 'm-8', name: 'Karthik Reddy', title: 'MD, Manufacturing PE', rating: '4.8', reviews: '95 reviews', price: 'â‚¹4,500/hr', tags: ['Finance', 'Manufacturing'], image: 'https://i.pravatar.cc/150?u=karthik' },
+    { id: 'm-1', name: 'Aditi Rao', title: 'VP Product, Freshworks', rating: '4.9', reviews: '128 reviews', price: 'Rs 2500/hr', tags: ['Product', 'SaaS', 'GTM'], image: 'https://i.pravatar.cc/150?u=aditi' },
+    { id: 'm-2', name: 'Rohan Deshmukh', title: 'Angel Investor & Ex-founder', rating: '4.8', reviews: '96 reviews', price: 'Rs 3200/hr', tags: ['Fundraising', 'Fintech'], image: 'https://i.pravatar.cc/150?u=rohan' },
+    { id: 'm-3', name: 'Sneha Iyer', title: 'CMO, D2C consumer brand', rating: '4.7', reviews: '74 reviews', price: 'Rs 1800/hr', tags: ['Brand', 'D2C', 'Growth'], image: 'https://i.pravatar.cc/150?u=sneha' },
+    { id: 'm-4', name: 'Vikram Nair', title: 'Ex-McKinsey, Strategy', rating: '4.9', reviews: '152 reviews', price: 'Rs 4000/hr', tags: ['Strategy', 'Consulting'], image: 'https://i.pravatar.cc/150?u=vikram' },
+    { id: 'm-5', name: 'Priya Menon', title: 'Legal Counsel, Startup Law', rating: '4.8', reviews: '88 reviews', price: 'Rs 2200/hr', tags: ['Compliance', 'Legal'], image: 'https://i.pravatar.cc/150?u=priya' },
+    { id: 'm-6', name: 'Arjun Kapoor', title: 'CTO, Series-B startup', rating: '4.7', reviews: '61 reviews', price: 'Rs 2800/hr', tags: ['Tech', 'Engineering'], image: 'https://i.pravatar.cc/150?u=arjun' },
+    { id: 'm-7', name: 'Neha Bansal', title: 'Founder, EdTech', rating: '4.9', reviews: '110 reviews', price: 'Rs 3000/hr', tags: ['Product', 'EdTech'], image: 'https://i.pravatar.cc/150?u=neha' },
+    { id: 'm-8', name: 'Karthik Reddy', title: 'MD, Manufacturing PE', rating: '4.8', reviews: '95 reviews', price: 'Rs 4500/hr', tags: ['Finance', 'Manufacturing'], image: 'https://i.pravatar.cc/150?u=karthik' },
   ];
 
   const filters = ['All industries', 'SaaS', 'Fintech', 'D2C', 'Consulting', 'Legal', 'Tech', 'EdTech', 'Manufacturing'];
@@ -48,7 +48,7 @@ export default function MentorshipView() {
         <div className="absolute inset-0 p-6 md:p-10 lg:p-12 flex flex-col justify-end md:justify-center items-start md:items-end z-10 text-left md:text-right">
           <div className="w-full md:w-1/2 max-w-lg">
             <div className="text-xs font-extrabold text-brand-primary-500 uppercase tracking-widest mb-2">Mentorship</div>
-            <h1 className="text-3xl lg:text-4xl font-heading font-extrabold text-slate-800 mb-2 tracking-tight">Expert Connect â€” book 1:1 with the operators who've done it.</h1>
+            <h1 className="text-3xl lg:text-4xl font-heading font-extrabold text-slate-800 mb-2 tracking-tight">Expert Connect - book 1:1 with the operators who've done it.</h1>
             <p className="text-slate-600 font-medium mt-2">Filter by industry or expertise. Every mentor is verified by JBI.</p>
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function MentorshipView() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {displayedMentors.length === 0 ? (
           <div className="col-span-full py-16 flex flex-col items-center justify-center text-slate-500 text-center bg-white dark:bg-white rounded-2xl border border-slate-200 dark:border-slate-200">
-            <div className="text-5xl mb-4">ðŸ“­</div>
+            <div className="text-5xl mb-4">📭</div>
             <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">No mentors found</h3>
             <p className="text-sm">Try selecting a different industry.</p>
           </div>

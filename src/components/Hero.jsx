@@ -131,7 +131,7 @@ export default function Hero() {
             </div>
             <div>
               <div className="text-xs font-bold text-slate-800">Funding Approved</div>
-              <div className="text-[10px] text-slate-600">Seed Round • ₹2.5Cr</div>
+              <div className="text-[10px] text-slate-600">Seed Round • Rs 2.5Cr</div>
             </div>
           </motion.div>
 

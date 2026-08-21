@@ -71,7 +71,7 @@ export default function InvestmentFacilitationView() {
           </div>
           <div>
             <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-800">Pitch to {inv.name}</h2>
-            <div className="text-sm text-slate-500">{inv.stage} â€¢ {inv.sector}</div>
+            <div className="text-sm text-slate-500">{inv.stage} • {inv.sector}</div>
           </div>
         </div>
 
@@ -196,7 +196,7 @@ export default function InvestmentFacilitationView() {
               </div>
               <div className="text-3xl font-heading font-extrabold text-slate-900 dark:text-white mb-2">{kpi.value}</div>
               <div className="text-xs font-semibold text-emerald-500 flex items-center gap-1">
-                â†— {kpi.sub}
+                ↗ {kpi.sub}
               </div>
             </motion.div>
           )

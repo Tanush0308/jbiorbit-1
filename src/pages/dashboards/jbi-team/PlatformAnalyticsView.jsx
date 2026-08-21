@@ -27,7 +27,7 @@ const roleDistribution = [
 const COLORS = ['#075A9D', '#4C88B8', '#064F8A', '#88B0D0'];
 
 const summaryCards = [
-  { title: 'Total Revenue', value: '₹1.8Cr', trend: '+24%', icon: DollarSign, color: 'text-brand-primary-400', bg: 'bg-brand-primary-400/10' },
+  { title: 'Total Revenue', value: 'Rs 1.8Cr', trend: '+24%', icon: DollarSign, color: 'text-brand-primary-400', bg: 'bg-brand-primary-400/10' },
   { title: 'Total Users', value: '18.5k', trend: '+12%', icon: Users, color: 'text-blue-500', bg: 'bg-blue-500/10' },
   { title: 'Conversion Rate', value: '8.4%', trend: '+1.2%', icon: TrendingUp, color: 'text-brand-primary-500', bg: 'bg-brand-primary-500/10' },
 ];
@@ -113,7 +113,7 @@ export default function PlatformAnalyticsView() {
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#333" opacity={0.2} />
                 <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fill: '#888', fontSize: 12 }} dy={10} />
-                <YAxis axisLine={false} tickLine={false} tick={{ fill: '#888', fontSize: 12 }} tickFormatter={(val) => `₹${val/1000}k`} />
+                <YAxis axisLine={false} tickLine={false} tick={{ fill: '#888', fontSize: 12 }} tickFormatter={(val) => `Rs ${val/1000}k`} />
                 <RechartsTooltip 
                   contentStyle={{ backgroundColor: '#1E1E1E', border: 'none', borderRadius: '12px', color: '#fff' }}
                   itemStyle={{ color: '#075A9D', fontWeight: 'bold' }}

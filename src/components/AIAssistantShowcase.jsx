@@ -5,7 +5,7 @@ import { BrainCircuit, Sparkles, MessageSquare, Briefcase, FileText, BarChart3, 
 const aiResponses = [
   { icon: BarChart3, title: 'Market Size', desc: '$4.5B projected by 2026' },
   { icon: Target, title: 'Competitors', desc: 'Rebel Foods, Curefoods' },
-  { icon: Calculator, title: 'Investment', desc: '₹15L - ₹25L Initial Setup' },
+  { icon: Calculator, title: 'Investment', desc: 'Rs 15L - Rs 25L Initial Setup' },
   { icon: ShieldCheck, title: 'Licenses', desc: 'FSSAI, GST, Fire Safety' },
   { icon: FileText, title: 'Marketing', desc: 'Swiggy/Zomato Ads, Local SEO' },
   { icon: Briefcase, title: 'Schemes', desc: 'MUDRA Loan, Startup India' },

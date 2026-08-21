@@ -35,10 +35,10 @@ export default function FranchiseOptionsView() {
   }, [investment, monthlyProfit]);
 
   const franchises = [
-    { id: 'f-1', name: 'Brew & Bake CafÃ©', industry: 'F&B', investment: 'â‚¹15L - â‚¹25L', roi: '24%', breakEven: '18 Months', locations: 'Pan India', logo: 'B' },
-    { id: 'f-2', name: 'TechFix Solutions', industry: 'Retail Tech', investment: 'â‚¹8L - â‚¹12L', roi: '32%', breakEven: '12 Months', locations: 'Tier 1 & 2', logo: 'T' },
-    { id: 'f-3', name: 'FitLife Gyms', industry: 'Health & Wellness', investment: 'â‚¹40L - â‚¹60L', roi: '18%', breakEven: '24 Months', locations: 'Metro Cities', logo: 'F' },
-    { id: 'f-4', name: 'EduSmart Academy', industry: 'Education', investment: 'â‚¹5L - â‚¹10L', roi: '45%', breakEven: '9 Months', locations: 'Pan India', logo: 'E' },
+    { id: 'f-1', name: 'Brew & Bake Cafe', industry: 'F&B', investment: 'Rs 15L - Rs 25L', roi: '24%', breakEven: '18 Months', locations: 'Pan India', logo: 'B' },
+    { id: 'f-2', name: 'TechFix Solutions', industry: 'Retail Tech', investment: 'Rs 8L - Rs 12L', roi: '32%', breakEven: '12 Months', locations: 'Tier 1 & 2', logo: 'T' },
+    { id: 'f-3', name: 'FitLife Gyms', industry: 'Health & Wellness', investment: 'Rs 40L - Rs 60L', roi: '18%', breakEven: '24 Months', locations: 'Metro Cities', logo: 'F' },
+    { id: 'f-4', name: 'EduSmart Academy', industry: 'Education', investment: 'Rs 5L - Rs 10L', roi: '45%', breakEven: '9 Months', locations: 'Pan India', logo: 'E' },
   ];
 
   const filteredFranchises = franchises.filter(f => 
@@ -56,7 +56,7 @@ export default function FranchiseOptionsView() {
           </div>
           <div>
             <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-800">{f.name}</h2>
-            <div className="text-sm text-slate-500">{f.industry} â€¢ {f.locations}</div>
+            <div className="text-sm text-slate-500">{f.industry} • {f.locations}</div>
           </div>
         </div>
 
@@ -224,7 +224,7 @@ export default function FranchiseOptionsView() {
                 </div>
               </div>
               <p className="text-sm text-slate-600 leading-relaxed mb-4">
-                Based on your budget (under â‚¹15L) and preference for quick break-evens, this franchise offers the highest probability of success.
+                Based on your budget (under Rs 15L) and preference for quick break-evens, this franchise offers the highest probability of success.
               </p>
               <div className="flex items-center gap-2 text-xs font-semibold text-emerald-400">
                 <CheckCircle2 size={14} /> 94% Profile Match
@@ -241,7 +241,7 @@ export default function FranchiseOptionsView() {
             
             <div className="space-y-4">
               <div>
-                <label className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 block">Initial Investment (â‚¹)</label>
+                <label className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 block">Initial Investment (Rs )</label>
                 <input 
                   type="number" 
                   value={investment} 
@@ -250,7 +250,7 @@ export default function FranchiseOptionsView() {
                 />
               </div>
               <div>
-                <label className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 block">Est. Monthly Profit (â‚¹)</label>
+                <label className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 block">Est. Monthly Profit (Rs )</label>
                 <input 
                   type="number" 
                   value={monthlyProfit} 

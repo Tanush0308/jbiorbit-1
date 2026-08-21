@@ -13,10 +13,10 @@ export default function WebinarsView() {
   const [loadingId, setLoadingId] = useState(null);
 
   const webinars = [
-    { id: 'w-1', title: 'Building Your Fundraising Deck', author: 'by Rohan Deshmukh', date: '18 Feb 2026 Â· 6:00 PM', status: 'Upcoming', image: 'https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&w=600&q=80' },
-    { id: 'w-2', title: 'MSME Digital Marketing 101', author: 'by Sneha Iyer', date: '22 Feb 2026 Â· 5:00 PM', status: 'Upcoming', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80' },
-    { id: 'w-3', title: 'Legal 101 for Founders', author: 'by Priya Menon', date: '05 Feb 2026 Â· 6:30 PM', status: 'Past', image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=600&q=80' },
-    { id: 'w-4', title: 'Hiring Your First Engineers', author: 'by Arjun Kapoor', date: '12 Feb 2026 Â· 7:00 PM', status: 'Upcoming', image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80' },
+    { id: 'w-1', title: 'Building Your Fundraising Deck', author: 'by Rohan Deshmukh', date: '18 Feb 2026 · 6:00 PM', status: 'Upcoming', image: 'https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?auto=format&fit=crop&w=600&q=80' },
+    { id: 'w-2', title: 'MSME Digital Marketing 101', author: 'by Sneha Iyer', date: '22 Feb 2026 · 5:00 PM', status: 'Upcoming', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80' },
+    { id: 'w-3', title: 'Legal 101 for Founders', author: 'by Priya Menon', date: '05 Feb 2026 · 6:30 PM', status: 'Past', image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=600&q=80' },
+    { id: 'w-4', title: 'Hiring Your First Engineers', author: 'by Arjun Kapoor', date: '12 Feb 2026 · 7:00 PM', status: 'Upcoming', image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80' },
   ];
 
   const handleAction = (webinar) => {
@@ -33,7 +33,7 @@ export default function WebinarsView() {
             </div>
           </div>
           <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{webinar.title}</h3>
-          <p className="text-sm text-slate-500 mb-6">{webinar.author} â€¢ {webinar.date}</p>
+          <p className="text-sm text-slate-500 mb-6">{webinar.author} • {webinar.date}</p>
         </div>
       );
     } else {

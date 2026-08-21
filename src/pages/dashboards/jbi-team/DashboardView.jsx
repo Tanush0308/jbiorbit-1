@@ -11,7 +11,7 @@ import { useToast } from '../../../context/ToastContext';
 const KPIs = [
   { title: 'Platform Health', value: '99.98%', icon: Activity, trend: '+0.01%', color: 'text-green-500' },
   { title: 'Total Users', value: '18,542', icon: Users, trend: '+12%', color: 'text-brand-primary-500' },
-  { title: 'Revenue This Month', value: '₹18.4L', icon: DollarSign, trend: '+8.4%', color: 'text-brand-primary-400' },
+  { title: 'Revenue This Month', value: 'Rs 18.4L', icon: DollarSign, trend: '+8.4%', color: 'text-brand-primary-400' },
   { title: 'Active Sessions', value: '438', icon: TrendingUp, trend: '+24%', color: 'text-blue-500' },
 ];
 

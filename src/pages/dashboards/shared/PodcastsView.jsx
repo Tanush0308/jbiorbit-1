@@ -10,10 +10,10 @@ export default function PodcastsView() {
   const toast = useToast();
 
   const podcasts = [
-    { id: 'p-1', title: 'Building in Bharat â€” Ep. 42', author: 'with Kunal Shah', duration: '58 min', image: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=500&q=80' },
-    { id: 'p-2', title: 'The MSME Story â€” Nashik Edition', author: 'with Sameer Patil', duration: '44 min', image: 'https://images.unsplash.com/photo-1581368135153-a506cf13b1e1?auto=format&fit=crop&w=500&q=80' },
+    { id: 'p-1', title: 'Building in Bharat - Ep. 42', author: 'with Kunal Shah', duration: '58 min', image: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=500&q=80' },
+    { id: 'p-2', title: 'The MSME Story - Nashik Edition', author: 'with Sameer Patil', duration: '44 min', image: 'https://images.unsplash.com/photo-1581368135153-a506cf13b1e1?auto=format&fit=crop&w=500&q=80' },
     { id: 'p-3', title: 'Fundraising Myths, Busted', author: 'with Rohan Deshmukh', duration: '51 min', image: 'https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&w=500&q=80' },
-    { id: 'p-4', title: 'Scaling a D2C Brand to â‚¹100Cr', author: 'with Sneha Iyer', duration: '62 min', image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80' },
+    { id: 'p-4', title: 'Scaling a D2C Brand to Rs 100Cr', author: 'with Sneha Iyer', duration: '62 min', image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80' },
     { id: 'p-5', title: 'AI in Traditional Businesses', author: 'with Ankit R.', duration: '48 min', image: 'https://images.unsplash.com/photo-1587614382346-4ec70e388b28?auto=format&fit=crop&w=500&q=80' },
     { id: 'p-6', title: 'Bootstrapping vs VC Funding', author: 'with Ritika Sen', duration: '55 min', image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80' },
   ];
@@ -33,7 +33,7 @@ export default function PodcastsView() {
           </div>
         </div>
         <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{podcast.title}</h3>
-        <p className="text-sm text-slate-500 mb-6">{podcast.author} â€¢ {podcast.duration}</p>
+        <p className="text-sm text-slate-500 mb-6">{podcast.author} • {podcast.duration}</p>
       </div>
     );
   };

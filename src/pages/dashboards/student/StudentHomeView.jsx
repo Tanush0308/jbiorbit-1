@@ -11,10 +11,10 @@ export default function StudentHomeView() {
   ];
 
   const internships = [
-    { logo: 'F', bg: 'bg-white', title: 'Product Analyst Intern', company: 'Freshworks', loc: 'Chennai · Hybrid', pay: '₹35,000/mo', duration: '6 months' },
-    { logo: 'b', bg: 'bg-white', title: 'Growth Marketing Intern', company: 'boAt Lifestyle', loc: 'Mumbai · Onsite', pay: '₹25,000/mo', duration: '3 months' },
-    { logo: 'R', bg: 'bg-white', title: 'Data Science Intern', company: 'Razorpay', loc: 'Bangalore · Remote', pay: '₹45,000/mo', duration: '6 months' },
-    { logo: 'A', bg: 'bg-white', title: 'Investment Banking Intern', company: 'Avendus Capital', loc: 'Mumbai · Onsite', pay: '₹40,000/mo', duration: '4 months' },
+    { logo: 'F', bg: 'bg-white', title: 'Product Analyst Intern', company: 'Freshworks', loc: 'Chennai · Hybrid', pay: 'Rs 35000/mo', duration: '6 months' },
+    { logo: 'b', bg: 'bg-white', title: 'Growth Marketing Intern', company: 'boAt Lifestyle', loc: 'Mumbai · Onsite', pay: 'Rs 25000/mo', duration: '3 months' },
+    { logo: 'R', bg: 'bg-white', title: 'Data Science Intern', company: 'Razorpay', loc: 'Bangalore · Remote', pay: 'Rs 45000/mo', duration: '6 months' },
+    { logo: 'A', bg: 'bg-white', title: 'Investment Banking Intern', company: 'Avendus Capital', loc: 'Mumbai · Onsite', pay: 'Rs 40000/mo', duration: '4 months' },
   ];
 
   const mentors = [

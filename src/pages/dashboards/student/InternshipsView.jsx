@@ -11,9 +11,9 @@ export default function InternshipsView() {
   const [loadingId, setLoadingId] = useState(null);
 
   const allInternships = [
-    { id: 'int-1', logo: 'F', bg: 'bg-white', title: 'Product Analyst Intern', company: 'Freshworks', loc: 'Chennai · Hybrid', duration: '5 months', pay: '₹35,000/mo', tags: ['SaaS', 'SQL', 'Analytics'], posted: 'Posted 2 days ago' },
-    { id: 'int-2', logo: 'b', bg: 'bg-white', title: 'Growth Marketing Intern', company: 'boAt Lifestyle', loc: 'Mumbai · Onsite', duration: '3 months', pay: '₹25,000/mo', tags: ['D2C', 'Ads', 'Content'], posted: 'Posted 5 days ago' },
-    { id: 'int-3', logo: 'R', bg: 'bg-white', title: 'Data Science Intern', company: 'Razorpay', loc: 'Bangalore · Remote', duration: '6 months', pay: '₹45,000/mo', tags: ['Python', 'ML', 'Fintech'], posted: 'Posted 1 day ago' },
+    { id: 'int-1', logo: 'F', bg: 'bg-white', title: 'Product Analyst Intern', company: 'Freshworks', loc: 'Chennai · Hybrid', duration: '5 months', pay: 'Rs 35000/mo', tags: ['SaaS', 'SQL', 'Analytics'], posted: 'Posted 2 days ago' },
+    { id: 'int-2', logo: 'b', bg: 'bg-white', title: 'Growth Marketing Intern', company: 'boAt Lifestyle', loc: 'Mumbai · Onsite', duration: '3 months', pay: 'Rs 25000/mo', tags: ['D2C', 'Ads', 'Content'], posted: 'Posted 5 days ago' },
+    { id: 'int-3', logo: 'R', bg: 'bg-white', title: 'Data Science Intern', company: 'Razorpay', loc: 'Bangalore · Remote', duration: '6 months', pay: 'Rs 45000/mo', tags: ['Python', 'ML', 'Fintech'], posted: 'Posted 1 day ago' },
   ];
 
   const handleApply = (intern) => {

@@ -15,7 +15,7 @@ const features = [
     title: 'Venture Capital Facilitation',
     desc: 'Bypass the traditional pitching grind. Our algorithm matches your startup metrics directly with investor mandates for faster term sheets.',
     benefits: ['Algorithmic matchmaking', 'Secure data rooms', 'Automated term sheet generation'],
-    stats: { value: '₹25Cr+', label: 'Capital Deployed' },
+    stats: { value: 'Rs 25Cr+', label: 'Capital Deployed' },
     reverse: true,
     image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80'
   }

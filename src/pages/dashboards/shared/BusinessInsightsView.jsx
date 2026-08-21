@@ -115,7 +115,7 @@ export default function BusinessInsightsView() {
                 </div>
                 <div className="text-3xl font-heading font-extrabold text-slate-900 dark:text-slate-800 mb-2">{kpi.value}</div>
                 <div className={`text-xs font-semibold flex items-center gap-1 ${kpi.trend === 'up' ? 'text-emerald-500' : 'text-amber-500'}`}>
-                  {kpi.trend === 'up' ? 'â†—' : 'â†˜'} {kpi.sub}
+                  {kpi.trend === 'up' ? '↗' : '↘'} {kpi.sub}
                 </div>
               </div>
             </motion.div>

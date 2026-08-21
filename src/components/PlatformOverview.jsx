@@ -20,7 +20,7 @@ const tabData = {
   },
   entrepreneurs: {
     title: 'Venture Growth & Capital Access',
-    stats: [{ label: 'Revenue MRR', val: '₹12.5L' }, { label: 'Burn Rate', val: '₹3.2L' }],
+    stats: [{ label: 'Revenue MRR', val: 'Rs 12.5L' }, { label: 'Burn Rate', val: 'Rs 3.2L' }],
     chartBars: [20, 35, 30, 50, 70, 65, 95],
     cardMsg: 'Seed Funding Term Sheet Received'
   },

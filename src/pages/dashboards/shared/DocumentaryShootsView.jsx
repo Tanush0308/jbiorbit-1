@@ -14,9 +14,9 @@ export default function DocumentaryShootsView() {
   const { openModal, closeModal } = useModal();
 
   const packages = [
-    { id: 'p-1', name: 'Founder Story', duration: '3-5 mins', price: 'â‚¹1.5L', features: ['1 Day Shoot', 'Executive Interviews', 'B-Roll Footage', 'Web Optimized'] },
-    { id: 'p-2', name: 'Mini Documentary', duration: '10-15 mins', price: 'â‚¹4.5L', features: ['3 Days Shoot', 'Full Team Coverage', 'Cinematic Grading', '4K Deliverables'] },
-    { id: 'p-3', name: 'Brand Film', duration: '1-2 mins', price: 'â‚¹2.5L', features: ['Concept Scripting', 'Studio Setup', 'Motion Graphics', 'Social Media Cuts'] },
+    { id: 'p-1', name: 'Founder Story', duration: '3-5 mins', price: 'Rs 1.5L', features: ['1 Day Shoot', 'Executive Interviews', 'B-Roll Footage', 'Web Optimized'] },
+    { id: 'p-2', name: 'Mini Documentary', duration: '10-15 mins', price: 'Rs 4.5L', features: ['3 Days Shoot', 'Full Team Coverage', 'Cinematic Grading', '4K Deliverables'] },
+    { id: 'p-3', name: 'Brand Film', duration: '1-2 mins', price: 'Rs 2.5L', features: ['Concept Scripting', 'Studio Setup', 'Motion Graphics', 'Social Media Cuts'] },
   ];
 
   const portfolio = [

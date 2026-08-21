@@ -4,8 +4,8 @@ import { TrendingUp, DollarSign, Activity, Users, ArrowUpRight, FileText } from 
 
 export default function EntrepreneurHome() {
   const stats = [
-    { label: 'MONTHLY REVENUE', value: '₹4.2L', sub: '+12% this month', subColor: 'text-emerald-500', icon: DollarSign },
-    { label: 'FUNDING RAISED', value: '₹50L', sub: 'Seed round closed', subColor: 'text-emerald-500', icon: TrendingUp },
+    { label: 'MONTHLY REVENUE', value: 'Rs 4.2L', sub: '+12% this month', subColor: 'text-emerald-500', icon: DollarSign },
+    { label: 'FUNDING RAISED', value: 'Rs 50L', sub: 'Seed round closed', subColor: 'text-emerald-500', icon: TrendingUp },
     { label: 'ACTIVE USERS', value: '1,240', sub: '+18% growth', subColor: 'text-emerald-500', icon: Users },
     { label: 'BUSINESS HEALTH', value: '92/100', sub: 'AI Insight', subColor: 'text-emerald-500', icon: Activity },
   ];

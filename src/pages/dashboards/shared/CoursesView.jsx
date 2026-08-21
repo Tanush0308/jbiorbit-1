@@ -1,5 +1,5 @@
-﻿import React, { useState } from 'react';
-import { Bookmark, Check, Loader2 } from 'lucide-react';
+import React, { useState } from 'react';
+import { Bookmark, Check, Loader2, Clock, BookOpen } from 'lucide-react';
 import { useToast } from '../../../context/ToastContext';
 import { useAppContext } from '../../../context/AppContext';
 
@@ -11,12 +11,12 @@ export default function CoursesView() {
   const [loadingId, setLoadingId] = useState(null);
 
   const allCourses = [
-    { id: 'c-1', title: 'Zero to Product-Market Fit', author: 'by Aditi Rao', level: 'INTERMEDIATE', tag: 'Bestseller', duration: '8 weeks', lessons: '42 lessons', price: 'â‚¹4,999', image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=500&q=80' },
-    { id: 'c-2', title: 'Fundraising Playbook for Indian Startups', author: 'by Rohan Deshmukh', level: 'ADVANCED', tag: 'New', duration: '6 weeks', lessons: '28 lessons', price: 'â‚¹6,499', image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=500&q=80' },
-    { id: 'c-3', title: 'D2C Growth Marketing 101', author: 'by Sneha Iyer', level: 'BEGINNER', tag: 'Popular', duration: '4 weeks', lessons: '22 lessons', price: 'â‚¹2,999', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80' },
-    { id: 'c-4', title: 'Financial Modelling for Founders', author: 'by Karthik Reddy', level: 'INTERMEDIATE', tag: '', duration: '5 weeks', lessons: '30 lessons', price: 'â‚¹5,499', image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=500&q=80' },
-    { id: 'c-5', title: 'Legal Essentials â€” Startup Edition', author: 'by Priya Menon', level: 'BEGINNER', tag: '', duration: '3 weeks', lessons: '15 lessons', price: 'â‚¹1,999', image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=500&q=80' },
-    { id: 'c-6', title: 'MBA Consulting Case Prep', author: 'by Vikram Nair', level: 'ADVANCED', tag: 'Cohort', duration: '8 weeks', lessons: '40 lessons', price: 'â‚¹8,999', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80' },
+    { id: 'c-1', title: 'Zero to Product-Market Fit', author: 'by Aditi Rao', level: 'INTERMEDIATE', tag: 'Bestseller', duration: '8 weeks', lessons: '42 lessons', price: 'Rs 4999', image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=500&q=80' },
+    { id: 'c-2', title: 'Fundraising Playbook for Indian Startups', author: 'by Rohan Deshmukh', level: 'ADVANCED', tag: 'New', duration: '6 weeks', lessons: '28 lessons', price: 'Rs 6499', image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=500&q=80' },
+    { id: 'c-3', title: 'D2C Growth Marketing 101', author: 'by Sneha Iyer', level: 'BEGINNER', tag: 'Popular', duration: '4 weeks', lessons: '22 lessons', price: 'Rs 2999', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80' },
+    { id: 'c-4', title: 'Financial Modelling for Founders', author: 'by Karthik Reddy', level: 'INTERMEDIATE', tag: '', duration: '5 weeks', lessons: '30 lessons', price: 'Rs 5499', image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=500&q=80' },
+    { id: 'c-5', title: 'Legal Essentials - Startup Edition', author: 'by Priya Menon', level: 'BEGINNER', tag: '', duration: '3 weeks', lessons: '15 lessons', price: 'Rs 1999', image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=500&q=80' },
+    { id: 'c-6', title: 'MBA Consulting Case Prep', author: 'by Vikram Nair', level: 'ADVANCED', tag: 'Cohort', duration: '8 weeks', lessons: '40 lessons', price: 'Rs 8999', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80' },
   ];
 
   const handleEnroll = (course) => {
@@ -79,7 +79,6 @@ export default function CoursesView() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {displayedCourses.length === 0 ? (
           <div className="col-span-full py-16 flex flex-col items-center justify-center text-slate-500 text-center bg-white dark:bg-white rounded-2xl border border-slate-200 dark:border-slate-200">
-            <div className="text-5xl mb-4">ðŸ“­</div>
             <h3 className="text-lg font-bold text-slate-900 dark:text-slate-800 mb-2">No courses found</h3>
             <p className="text-sm">You haven't {activeTab.toLowerCase()} any courses yet.</p>
           </div>
@@ -116,9 +115,9 @@ export default function CoursesView() {
                   <h3 className="font-bold text-lg text-slate-900 dark:text-slate-800 leading-tight mb-1 group-hover:text-brand-primary-500 transition-colors">{course.title}</h3>
                   <p className="text-sm text-slate-500 mb-4">{course.author}</p>
                   
-                  <div className="flex items-center gap-4 text-xs text-slate-600 font-medium mb-6">
-                    <span className="flex items-center gap-1">â± {course.duration}</span>
-                    <span className="flex items-center gap-1">ðŸ“š {course.lessons}</span>
+                  <div className="flex items-center gap-4 text-xs text-slate-400 font-medium mb-6">
+                    <span className="flex items-center gap-1.5"><Clock size={14} /> {course.duration}</span>
+                    <span className="flex items-center gap-1.5"><BookOpen size={14} /> {course.lessons}</span>
                   </div>
                   
                   <div className="flex items-center justify-between mt-auto">

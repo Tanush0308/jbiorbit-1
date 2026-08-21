@@ -54,7 +54,7 @@ export default function FinanceView() {
             <span className="flex items-center text-xs font-semibold text-green-500 bg-green-500/10 px-2 py-1 rounded-full"><ArrowUpRight size={14} className="mr-1" /> +12.5%</span>
           </div>
           <h3 className="text-slate-500 dark:text-slate-600 text-sm font-medium">Monthly Revenue</h3>
-          <div className="text-3xl font-bold text-slate-900 dark:text-white mt-1 font-heading">₹18.4L</div>
+          <div className="text-3xl font-bold text-slate-900 dark:text-white mt-1 font-heading">Rs 18.4L</div>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-white dark:bg-white rounded-2xl p-5 border border-slate-200 dark:border-slate-200 shadow-sm">
@@ -63,7 +63,7 @@ export default function FinanceView() {
             <span className="flex items-center text-xs font-semibold text-green-500 bg-green-500/10 px-2 py-1 rounded-full"><ArrowUpRight size={14} className="mr-1" /> +18.2%</span>
           </div>
           <h3 className="text-slate-500 dark:text-slate-600 text-sm font-medium">Net Profit</h3>
-          <div className="text-3xl font-bold text-slate-900 dark:text-slate-800 mt-1 font-heading">₹12.3L</div>
+          <div className="text-3xl font-bold text-slate-900 dark:text-slate-800 mt-1 font-heading">Rs 12.3L</div>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="bg-white dark:bg-white rounded-2xl p-5 border border-slate-200 dark:border-slate-200 shadow-sm">
@@ -72,7 +72,7 @@ export default function FinanceView() {
             <span className="flex items-center text-xs font-semibold text-green-500 bg-green-500/10 px-2 py-1 rounded-full"><ArrowUpRight size={14} className="mr-1" /> +5.4%</span>
           </div>
           <h3 className="text-slate-500 dark:text-slate-600 text-sm font-medium">Subscriptions</h3>
-          <div className="text-3xl font-bold text-slate-900 dark:text-slate-800 mt-1 font-heading">₹8.2L</div>
+          <div className="text-3xl font-bold text-slate-900 dark:text-slate-800 mt-1 font-heading">Rs 8.2L</div>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="bg-white dark:bg-white rounded-2xl p-5 border border-slate-200 dark:border-slate-200 shadow-sm">
@@ -81,7 +81,7 @@ export default function FinanceView() {
             <span className="flex items-center text-xs font-semibold text-red-500 bg-red-500/10 px-2 py-1 rounded-full"><ArrowDownRight size={14} className="mr-1" /> -2.1%</span>
           </div>
           <h3 className="text-slate-500 dark:text-slate-600 text-sm font-medium">Expenses</h3>
-          <div className="text-3xl font-bold text-slate-900 dark:text-slate-800 mt-1 font-heading">₹6.1L</div>
+          <div className="text-3xl font-bold text-slate-900 dark:text-slate-800 mt-1 font-heading">Rs 6.1L</div>
         </motion.div>
       </div>
 
@@ -103,7 +103,7 @@ export default function FinanceView() {
               </defs>
               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#333" opacity={0.2} />
               <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fill: '#888', fontSize: 12 }} dy={10} />
-              <YAxis axisLine={false} tickLine={false} tick={{ fill: '#888', fontSize: 12 }} tickFormatter={(val) => `₹${val/1000}k`} />
+              <YAxis axisLine={false} tickLine={false} tick={{ fill: '#888', fontSize: 12 }} tickFormatter={(val) => `Rs ${val/1000}k`} />
               <Tooltip contentStyle={{ backgroundColor: '#1E1E1E', border: 'none', borderRadius: '12px', color: '#fff' }} />
               <Area type="monotone" dataKey="revenue" stroke="#4C88B8" strokeWidth={3} fillOpacity={1} fill="url(#colorRevenueFin)" />
               <Area type="monotone" dataKey="profit" stroke="#10B981" strokeWidth={3} fillOpacity={1} fill="url(#colorProfit)" />

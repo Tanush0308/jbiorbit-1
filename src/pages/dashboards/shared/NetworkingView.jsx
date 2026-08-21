@@ -165,7 +165,7 @@ export default function NetworkingView() {
                     />
                     <div className="flex flex-col gap-0.5">
                       <h3 className="text-[24px] font-bold text-slate-900 dark:text-slate-900 dark:text-white leading-tight group-hover:text-brand-primary-500 transition-colors">{c.name}</h3>
-                      <p className="text-[16px] text-slate-500 dark:text-slate-600 leading-tight">{c.role} â€¢ {c.company}</p>
+                      <p className="text-[16px] text-slate-500 dark:text-slate-600 leading-tight">{c.role} • {c.company}</p>
                       <div className="flex items-center gap-1.5 text-[14px] text-slate-500 dark:text-slate-600 mt-1">
                         <MapPin size={14} /> {c.city}
                       </div>
