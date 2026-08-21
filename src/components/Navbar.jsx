@@ -58,21 +58,11 @@ export default function Navbar() {
         
         {/* Logo */}
         <div className="flex items-center gap-3 cursor-pointer group" onClick={() => setRoute && setRoute('landing')}>
-          <div className="w-10 h-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="4" fill="url(#logoGrad)" />
-              <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(45 12 12)" stroke="url(#logoGrad)" strokeWidth="2"/>
-              <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-45 12 12)" stroke="url(#logoGrad)" strokeWidth="2"/>
-              <defs>
-                <linearGradient id="logoGrad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#075A9D" />
-                  <stop offset="1" stopColor="#4C88B8" />
-                </linearGradient>
-              </defs>
-            </svg>
+          <div className="h-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+            <img src="/jbi-logo.png" alt="JBI Logo" className="h-full w-auto object-contain rounded shadow-sm" />
           </div>
           <span className="font-heading font-extrabold text-xl tracking-tight text-brand-primary-900 dark:text-white">
-            JBI <span className="text-gradient">Orbit</span>
+            <span className="text-gradient">Orbit</span>
           </span>
         </div>
 

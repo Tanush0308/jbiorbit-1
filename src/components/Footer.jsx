@@ -15,18 +15,8 @@ export default function Footer() {
           
           <div className="col-span-2 lg:col-span-1 space-y-4">
             <div className="flex items-center gap-2">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="4" fill="url(#footerLogoGrad)" />
-                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(45 12 12)" stroke="url(#footerLogoGrad)" strokeWidth="2"/>
-                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-45 12 12)" stroke="url(#footerLogoGrad)" strokeWidth="2"/>
-                <defs>
-                  <linearGradient id="footerLogoGrad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#075A9D" />
-                    <stop offset="1" stopColor="#4C88B8" />
-                  </linearGradient>
-                </defs>
-              </svg>
-              <span className="font-heading font-bold text-lg text-brand-primary-900 dark:text-white">JBI Orbit</span>
+              <img src="/jbi-logo.png" alt="JBI Logo" className="h-6 w-auto object-contain rounded shadow-sm" />
+              <span className="font-heading font-bold text-lg text-brand-primary-900 dark:text-white">Orbit</span>
             </div>
             <p className="text-sm text-slate-500 dark:text-[#CBD5E1]">
               The enterprise-grade AI operating system for business growth.
