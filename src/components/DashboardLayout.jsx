@@ -163,7 +163,7 @@ export default function DashboardLayout({ children }) {
 
   return (
     <DashboardContext.Provider value={{ activeTab, setActiveTab }}>
-      <div className="min-h-screen bg-slate-50 dark:bg-white flex font-sans text-slate-900 dark:text-slate-100">
+      <div className="h-screen overflow-hidden bg-slate-50 dark:bg-white flex font-sans text-slate-900 dark:text-slate-100">
       
       {/* Mobile Sidebar Overlay */}
       <AnimatePresence>
@@ -290,59 +290,58 @@ export default function DashboardLayout({ children }) {
               </nav>
             </div>
           ))}
-        </div>
-
-        {/* User Profile Area */}
-        <div className="p-4 border-t border-white/10 bg-black/10 shrink-0" ref={profileRef}>
-          <div 
-            className={`flex items-center py-2 cursor-pointer hover:bg-white/10 rounded-lg transition-colors relative ${isDesktopSidebarCollapsed ? 'justify-center px-0' : 'px-2'}`}
-            onClick={() => setIsProfileOpen(!isProfileOpen)}
-          >
-            <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center text-brand-primary-500 font-bold text-sm shrink-0">
-              {user.name ? user.name.substring(0, 2).toUpperCase() : 'DE'}
-            </div>
-            
-            <div className={`flex-1 min-w-0 transition-all duration-300 overflow-hidden ${isDesktopSidebarCollapsed ? 'max-w-0 opacity-0 ml-0' : 'max-w-[200px] opacity-100 ml-3'}`}>
-              <div className="text-sm font-bold text-white truncate">{user.name || 'Demo User'}</div>
-              <div className="text-[10px] text-white/70 flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block shrink-0"></span>
-                <span className="truncate">{user.role}</span>
+          {/* User Profile Area (Moved inside scroll area) */}
+          <div className="p-4 mt-2 border-t border-white/10 bg-black/10 shrink-0" ref={profileRef}>
+            <div 
+              className={`flex items-center py-2 cursor-pointer hover:bg-white/10 rounded-lg transition-colors relative ${isDesktopSidebarCollapsed ? 'justify-center px-0' : 'px-2'}`}
+              onClick={() => setIsProfileOpen(!isProfileOpen)}
+            >
+              <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center text-brand-primary-500 font-bold text-sm shrink-0">
+                {user.name ? user.name.substring(0, 2).toUpperCase() : 'DE'}
               </div>
+              
+              <div className={`flex-1 min-w-0 transition-all duration-300 overflow-hidden ${isDesktopSidebarCollapsed ? 'max-w-0 opacity-0 ml-0' : 'max-w-[200px] opacity-100 ml-3'}`}>
+                <div className="text-sm font-bold text-white truncate">{user.name || 'Demo User'}</div>
+                <div className="text-[10px] text-white/70 flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block shrink-0"></span>
+                  <span className="truncate">{user.role}</span>
+                </div>
+              </div>
+              
+              {/* Profile Menu */}
+              <AnimatePresence>
+                {isProfileOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    className="absolute bottom-full left-0 mb-2 w-56 bg-white dark:bg-white border border-slate-200 dark:border-slate-200 rounded-xl shadow-2xl overflow-hidden z-50"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <div className="p-3 border-b border-slate-100 dark:border-slate-200">
+                      <div className="text-sm font-bold text-slate-900 dark:text-slate-800">{user.name}</div>
+                      <div className="text-xs text-slate-500">{user.email}</div>
+                    </div>
+                    <div className="p-2 space-y-1">
+                      <button onClick={handleSettingsModal} className="w-full flex items-center gap-2 px-3 py-2 text-sm text-slate-700 dark:text-slate-600 hover:bg-slate-50 dark:hover:bg-slate-50 rounded-lg transition-colors">
+                        <User size={16} /> My Profile
+                      </button>
+                      <button onClick={handleSettingsModal} className="w-full flex items-center gap-2 px-3 py-2 text-sm text-slate-700 dark:text-slate-600 hover:bg-slate-50 dark:hover:bg-slate-50 rounded-lg transition-colors">
+                        <Settings size={16} /> Settings
+                      </button>
+                      <button className="w-full flex items-center gap-2 px-3 py-2 text-sm text-slate-700 dark:text-slate-600 hover:bg-slate-50 dark:hover:bg-slate-50 rounded-lg transition-colors">
+                        <HelpCircle size={16} /> Help & Support
+                      </button>
+                    </div>
+                    <div className="p-2 border-t border-slate-100 dark:border-slate-200">
+                      <button onClick={handleLogout} className="w-full flex items-center gap-2 px-3 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-lg transition-colors font-semibold">
+                        <LogOut size={16} /> Sign Out
+                      </button>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
-            
-            {/* Profile Menu */}
-            <AnimatePresence>
-              {isProfileOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                  className="absolute bottom-full left-0 mb-2 w-56 bg-white dark:bg-white border border-slate-200 dark:border-slate-200 rounded-xl shadow-2xl overflow-hidden z-50"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <div className="p-3 border-b border-slate-100 dark:border-slate-200">
-                    <div className="text-sm font-bold text-slate-900 dark:text-slate-800">{user.name}</div>
-                    <div className="text-xs text-slate-500">{user.email}</div>
-                  </div>
-                  <div className="p-2 space-y-1">
-                    <button onClick={handleSettingsModal} className="w-full flex items-center gap-2 px-3 py-2 text-sm text-slate-700 dark:text-slate-600 hover:bg-slate-50 dark:hover:bg-slate-50 rounded-lg transition-colors">
-                      <User size={16} /> My Profile
-                    </button>
-                    <button onClick={handleSettingsModal} className="w-full flex items-center gap-2 px-3 py-2 text-sm text-slate-700 dark:text-slate-600 hover:bg-slate-50 dark:hover:bg-slate-50 rounded-lg transition-colors">
-                      <Settings size={16} /> Settings
-                    </button>
-                    <button className="w-full flex items-center gap-2 px-3 py-2 text-sm text-slate-700 dark:text-slate-600 hover:bg-slate-50 dark:hover:bg-slate-50 rounded-lg transition-colors">
-                      <HelpCircle size={16} /> Help & Support
-                    </button>
-                  </div>
-                  <div className="p-2 border-t border-slate-100 dark:border-slate-200">
-                    <button onClick={handleLogout} className="w-full flex items-center gap-2 px-3 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-lg transition-colors font-semibold">
-                      <LogOut size={16} /> Sign Out
-                    </button>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
           </div>
         </div>
       </motion.aside>
