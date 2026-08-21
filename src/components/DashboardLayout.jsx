@@ -87,9 +87,10 @@ export default function DashboardLayout({ children }) {
     setIsRoleDropdownOpen(false);
     setIsTransitioning(true);
     
-    toast.loading(`Switching to ${newRole} Dashboard...`, 1500);
+    const toastId = toast.loading(`Switching to ${newRole} Dashboard...`);
     
     setTimeout(() => {
+      toast.dismiss(toastId);
       setUser({ ...user, role: newRole });
       setActiveTab('Dashboard'); // Reset to home for new role
       setIsTransitioning(false);
