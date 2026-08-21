@@ -19,7 +19,6 @@ export const StudentConfig = {
         { title: 'Business Project Report', icon: FolderOpen, route: 'Business Project Report', permission: 'read' },
         { title: 'Business Insights', icon: Target, route: 'Business Insights', permission: 'read' },
         { title: 'Find Co-Founder', icon: Users, route: 'Find Co-Founder', permission: 'read' },
-        { title: 'Networking', icon: Network, route: 'Networking', permission: 'read' },
         { title: 'Podcasts', icon: Mic, route: 'Podcasts', permission: 'read' },
         { title: 'Webinars', icon: Video, route: 'Webinars', permission: 'read' },
         { title: 'Business Toolkit', icon: Settings, route: 'Business Toolkit', permission: 'read' },
@@ -27,7 +26,7 @@ export const StudentConfig = {
     }
   ],
   permissions: {
-    canView: ['Dashboard', 'Learning Progress', 'Mentorship', 'Internships', 'Courses', 'Business Project Report', 'Business Insights', 'Find Co-Founder', 'Networking', 'Podcasts', 'Webinars', 'Business Toolkit'],
+    canView: ['Dashboard', 'Learning Progress', 'Mentorship', 'Internships', 'Courses', 'Business Project Report', 'Business Insights', 'Find Co-Founder', 'Podcasts', 'Webinars', 'Business Toolkit'],
     canEdit: [],
     canCreate: [],
     canDelete: []
