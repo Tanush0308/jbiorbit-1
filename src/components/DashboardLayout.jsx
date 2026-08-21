@@ -290,8 +290,10 @@ export default function DashboardLayout({ children }) {
               </nav>
             </div>
           ))}
-          {/* User Profile Area (Moved inside scroll area) */}
-          <div className="p-4 mt-2 border-t border-white/10 bg-black/10 shrink-0" ref={profileRef}>
+        </div>
+
+        {/* User Profile Area */}
+        <div className="p-4 border-t border-white/10 bg-black/10 shrink-0 mt-auto" ref={profileRef}>
             <div 
               className={`flex items-center py-2 cursor-pointer hover:bg-white/10 rounded-lg transition-colors relative ${isDesktopSidebarCollapsed ? 'justify-center px-0' : 'px-2'}`}
               onClick={() => setIsProfileOpen(!isProfileOpen)}
@@ -343,7 +345,6 @@ export default function DashboardLayout({ children }) {
               </AnimatePresence>
             </div>
           </div>
-        </div>
       </motion.aside>
 
       {/* Main Content Area */}
