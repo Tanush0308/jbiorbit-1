@@ -517,50 +517,73 @@ export default function DashboardLayout({ children }) {
            </div>
         </div>
 
-        {/* Global AI Assistant Floating Button */}
+        {/* Global Help & FAQs Floating Button */}
         <button 
           onClick={() => {
-            addActivity('AI Assistant', 'Opened JBI Orbit AI Assistant');
+            addActivity('Help & FAQs', 'Opened JBI Orbit FAQs');
             openModal(
-              <div className="p-0 flex flex-col h-[500px]">
-                <div className="p-4 border-b border-slate-200 dark:border-slate-200 bg-brand-primary-500 text-white flex items-center gap-3">
+              <div className="p-0 flex flex-col max-h-[80vh] min-h-[500px]">
+                <div className="p-4 border-b border-slate-200 dark:border-slate-200 bg-brand-primary-500 text-white flex items-center gap-3 shrink-0">
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-                    <Sparkles size={20} />
+                    <HelpCircle size={20} />
                   </div>
                   <div>
-                    <h3 className="font-bold">Orbit AI Assistant</h3>
-                    <div className="text-xs text-white/80">Always here to help</div>
+                    <h3 className="font-bold">Orbit Help & FAQs</h3>
+                    <div className="text-xs text-white/80">Find answers to common questions</div>
                   </div>
                 </div>
                 
-                <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-50 dark:bg-white custom-scrollbar">
-                  <div className="flex gap-3 max-w-[85%]">
-                    <div className="w-8 h-8 rounded-full bg-brand-primary-500 flex items-center justify-center text-white shrink-0">
-                      <Sparkles size={14} />
-                    </div>
-                    <div className="bg-white dark:bg-white p-3 rounded-2xl rounded-tl-none border border-slate-200 dark:border-slate-200 shadow-sm text-sm text-slate-700 dark:text-slate-600">
-                      Hi {user.name}! I'm your JBI Orbit assistant. I can help you navigate the platform, find resources, or analyze your dashboard metrics. What would you like to do?
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="p-4 border-t border-slate-200 dark:border-slate-200 bg-white dark:bg-white">
-                  <div className="relative">
-                    <input 
-                      type="text" 
-                      placeholder="Ask Orbit AI anything..." 
-                      className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-slate-200 rounded-full pl-4 pr-12 py-3 text-sm focus:outline-none focus:border-brand-primary-500 text-slate-900 dark:text-white"
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter') {
-                          e.preventDefault();
-                          toast.info('AI Chat is a mockup in this demo.', 2000);
-                          e.target.value = '';
-                        }
-                      }}
-                    />
-                    <button className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-brand-primary-500 flex items-center justify-center text-white hover:bg-brand-primary-400 transition-colors">
-                      <Search size={14} />
-                    </button>
+                <div className="flex-1 overflow-y-auto p-6 bg-slate-50 dark:bg-white custom-scrollbar">
+                  <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Frequently Asked Questions</h4>
+                  
+                  <div className="space-y-3">
+                    <details className="group border border-slate-200 dark:border-slate-200 rounded-xl bg-white dark:bg-slate-50 overflow-hidden shadow-sm">
+                      <summary className="flex cursor-pointer list-none items-center justify-between p-4 font-bold text-sm text-slate-800 outline-none [&::-webkit-details-marker]:hidden hover:bg-slate-50 transition-colors">
+                        What does Startup Assistance do?
+                        <span className="transition-transform duration-300 group-open:-rotate-180 text-slate-400">
+                          <ChevronDown size={18} />
+                        </span>
+                      </summary>
+                      <div className="px-4 pb-4 pt-1 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                        Startup Assistance provides end-to-end guidance for founders, helping with company registration, compliance, initial team building, and preparing your startup for its first fundraising rounds.
+                      </div>
+                    </details>
+
+                    <details className="group border border-slate-200 dark:border-slate-200 rounded-xl bg-white dark:bg-slate-50 overflow-hidden shadow-sm">
+                      <summary className="flex cursor-pointer list-none items-center justify-between p-4 font-bold text-sm text-slate-800 outline-none [&::-webkit-details-marker]:hidden hover:bg-slate-50 transition-colors">
+                        What are Business Project Reports?
+                        <span className="transition-transform duration-300 group-open:-rotate-180 text-slate-400">
+                          <ChevronDown size={18} />
+                        </span>
+                      </summary>
+                      <div className="px-4 pb-4 pt-1 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                        Business Project Reports are comprehensive, industry-specific documents that include market research, financial models, and feasibility studies to help you evaluate new business ideas or secure bank loans.
+                      </div>
+                    </details>
+
+                    <details className="group border border-slate-200 dark:border-slate-200 rounded-xl bg-white dark:bg-slate-50 overflow-hidden shadow-sm">
+                      <summary className="flex cursor-pointer list-none items-center justify-between p-4 font-bold text-sm text-slate-800 outline-none [&::-webkit-details-marker]:hidden hover:bg-slate-50 transition-colors">
+                        How does the Mentorship program work?
+                        <span className="transition-transform duration-300 group-open:-rotate-180 text-slate-400">
+                          <ChevronDown size={18} />
+                        </span>
+                      </summary>
+                      <div className="px-4 pb-4 pt-1 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                        You can browse industry experts, view their availability, and book 1-on-1 video sessions. Mentors provide actionable advice on growth, product development, and strategy based on their real-world experience.
+                      </div>
+                    </details>
+
+                    <details className="group border border-slate-200 dark:border-slate-200 rounded-xl bg-white dark:bg-slate-50 overflow-hidden shadow-sm">
+                      <summary className="flex cursor-pointer list-none items-center justify-between p-4 font-bold text-sm text-slate-800 outline-none [&::-webkit-details-marker]:hidden hover:bg-slate-50 transition-colors">
+                        What is the Business Toolkit?
+                        <span className="transition-transform duration-300 group-open:-rotate-180 text-slate-400">
+                          <ChevronDown size={18} />
+                        </span>
+                      </summary>
+                      <div className="px-4 pb-4 pt-1 text-slate-600 text-sm leading-relaxed border-t border-slate-100">
+                        The Business Toolkit offers a collection of ready-to-use templates for pitch decks, financial sheets, legal contracts, and HR policies, saving you hundreds of hours in operational setup.
+                      </div>
+                    </details>
                   </div>
                 </div>
               </div>
@@ -568,8 +591,8 @@ export default function DashboardLayout({ children }) {
           }}
           className="fixed bottom-6 right-6 w-14 h-14 bg-brand-primary-500 text-white rounded-full shadow-2xl flex items-center justify-center hover:bg-brand-primary-400 hover:scale-110 transition-all z-40 group"
         >
-          <Sparkles size={24} />
-          <span className="absolute right-full mr-4 bg-white dark:bg-white text-white dark:text-slate-900 text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Ask Orbit AI</span>
+          <HelpCircle size={24} />
+          <span className="absolute right-full mr-4 bg-white dark:bg-white text-white dark:text-slate-900 text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-md border border-slate-200">Help & FAQs</span>
         </button>
 
       </main>
