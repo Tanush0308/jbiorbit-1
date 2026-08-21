@@ -54,7 +54,7 @@ export function ModalProvider({ children }) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={closeModal}
-              className="fixed inset-0 bg-white backdrop-blur-sm z-[9990]"
+              className="fixed inset-0 bg-brand-primary-900/40 backdrop-blur-sm z-[9990]"
             />
             
             {/* Modal Container */}

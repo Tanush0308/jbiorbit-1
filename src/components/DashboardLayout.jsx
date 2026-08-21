@@ -533,8 +533,8 @@ export default function DashboardLayout({ children }) {
                   </div>
                 </div>
                 
-                <div className="flex-1 overflow-y-auto p-6 bg-slate-50 dark:bg-white custom-scrollbar">
-                  <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Frequently Asked Questions</h4>
+                <div className="flex-1 overflow-y-auto p-6 bg-brand-primary-50 dark:bg-white custom-scrollbar">
+                  <h4 className="text-xs font-bold text-brand-primary-700 uppercase tracking-widest mb-4">Frequently Asked Questions</h4>
                   
                   <div className="space-y-3">
                     <details className="group border border-slate-200 dark:border-slate-200 rounded-xl bg-white dark:bg-slate-50 overflow-hidden shadow-sm">
