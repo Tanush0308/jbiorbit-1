@@ -25,6 +25,7 @@ const BusinessToolkitView = lazy(() => import('./shared/BusinessToolkitView'));
 
 // Role specific
 const InternshipsView = lazy(() => import('./student/InternshipsView'));
+const LearningProgressView = lazy(() => import('./student/LearningProgressView'));
 const StartupAnalyticsView = lazy(() => import('./entrepreneur/StartupAnalyticsView'));
 const TalentManagementView = lazy(() => import('./enterprise/TalentManagementView'));
 
@@ -84,7 +85,7 @@ export default function DashboardApp() {
     
     // 3. Role-Specific Modules
     case 'Internships': return <InternshipsView />;
-    case 'Learning Progress': return <NotFoundView />; // Example
+    case 'Learning Progress': return <LearningProgressView />;
     case 'Startup Analytics': return <StartupAnalyticsView />;
     case 'Talent Management': return <TalentManagementView />;
 
