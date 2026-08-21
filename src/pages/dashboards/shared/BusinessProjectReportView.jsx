@@ -7,7 +7,7 @@ export default function BusinessProjectReportView() {
     { name: 'Steel Manufacturing Business Report', category: 'Manufacturing', price: 'Rs 99', image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80' },
     { name: 'Fruit Export & Logistics Report', category: 'Agriculture & Export', price: 'Rs 99', image: 'https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=600&q=80' },
     { name: 'Cloud Kitchen Feasibility Report', category: 'Food & Beverage', price: 'Rs 99', image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80' },
-    { name: 'Solar Power Plant Setup Report', category: 'Renewable Energy', price: 'Rs 99', image: 'https://images.unsplash.com/photo-1509391366360-1f9509ce1581?auto=format&fit=crop&w=600&q=80' },
+    { name: 'Solar Power Plant Setup Report', category: 'Renewable Energy', price: 'Rs 99', image: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=600&q=80' },
     { name: 'IT Services Agency Business Plan', category: 'Technology', price: 'Rs 99', image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80' },
     { name: 'Electric Vehicle (EV) Dealership', category: 'Automotive', price: 'Rs 99', image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=600&q=80' }
   ];
