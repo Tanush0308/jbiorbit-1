@@ -15,7 +15,7 @@ export default function Footer() {
           
           <div className="col-span-2 lg:col-span-1 space-y-4">
             <div className="flex items-center gap-2">
-              <img src="/jbi-logo.png" alt="JBI Logo" className="h-6 w-auto object-contain rounded shadow-sm" />
+              <img src="/jbi-logo.jpeg" alt="JBI Logo" className="h-6 w-auto object-contain rounded shadow-sm" />
               <span className="font-heading font-bold text-lg text-brand-primary-900 dark:text-white">Orbit</span>
             </div>
             <p className="text-sm text-slate-500 dark:text-[#CBD5E1]">

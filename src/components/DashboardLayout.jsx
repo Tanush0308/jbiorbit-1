@@ -239,7 +239,7 @@ export default function DashboardLayout({ children }) {
         <div className="h-16 flex items-center justify-between px-6 border-b border-white/10 shrink-0 overflow-hidden">
           <div className="flex items-center gap-3 cursor-pointer overflow-hidden" onClick={() => setRoute('landing')}>
             <div className="h-8 shrink-0 flex items-center">
-              <img src="/jbi-logo.png" alt="JBI Logo" className="h-full w-auto object-contain rounded-sm" />
+              <img src="/jbi-logo.jpeg" alt="JBI Logo" className="h-full w-auto object-contain rounded-sm" />
             </div>
             <div className={`font-heading font-bold text-lg text-white whitespace-nowrap overflow-hidden transition-all duration-300 ${isDesktopSidebarCollapsed ? 'max-w-0 opacity-0 ml-0' : 'max-w-[200px] opacity-100'}`}>
               <span className="text-white/90">Orbit</span>

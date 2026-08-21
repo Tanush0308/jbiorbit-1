@@ -59,7 +59,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center gap-3 cursor-pointer group" onClick={() => setRoute && setRoute('landing')}>
           <div className="h-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-            <img src="/jbi-logo.png" alt="JBI Logo" className="h-full w-auto object-contain rounded shadow-sm" />
+            <img src="/jbi-logo.jpeg" alt="JBI Logo" className="h-full w-auto object-contain rounded shadow-sm" />
           </div>
           <span className="font-heading font-extrabold text-xl tracking-tight text-brand-primary-900 dark:text-white">
             <span className="text-gradient">Orbit</span>
